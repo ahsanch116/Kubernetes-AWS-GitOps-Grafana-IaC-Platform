@@ -1,0 +1,37 @@
+
+replicaCount: 1
+
+image:
+  repository: ""        # required — must be set per service
+  tag: "latest"
+  pullPolicy: Always
+
+service:
+  type: ClusterIP       # order-service overrides this to LoadBalancer
+  port: 3000            # overridden per service
+
+env: []                 # extra env vars — order-service adds SERVICE_URLs
+
+resources:
+  requests:
+    memory: "48Mi"
+    cpu: "25m"
+  limits:
+    memory: "96Mi"
+    cpu: "100m"
+
+probes:
+  liveness:
+    path: /health
+    initialDelaySeconds: 15
+    periodSeconds: 20
+  readiness:
+    path: /health
+    initialDelaySeconds: 5
+    periodSeconds: 10
+
+autoscaling:
+  enabled: false        # enabled in prod, disabled in dev
+  minReplicas: 1
+  maxReplicas: 4
+  targetCPUUtilizationPercentage: 70

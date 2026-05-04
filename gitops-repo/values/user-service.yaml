@@ -1,0 +1,7 @@
+image:
+  repository: 442042534130.dkr.ecr.us-east-1.amazonaws.com/user-service
+  tag: latest
+
+service:
+  type: ClusterIP
+  port: 3001

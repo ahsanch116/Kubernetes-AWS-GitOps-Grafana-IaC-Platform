@@ -1,0 +1,14 @@
+image:
+  repository: 442042534130.dkr.ecr.us-east-1.amazonaws.com/order-service
+  tag: latest
+
+service:
+  type: LoadBalancer
+  port: 3003
+
+# Extra env vars specific to order-service
+env:
+  - name: USER_SERVICE_URL
+    value: "http://user-service.platform.svc.cluster.local:3001"
+  - name: PRODUCT_SERVICE_URL
+    value: "http://product-service.platform.svc.cluster.local:3002"
