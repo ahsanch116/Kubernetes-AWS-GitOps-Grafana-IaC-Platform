@@ -76,7 +76,8 @@ cloud-native-platform/
 
 ## 🏗️ Architecture Diagram
 
-> 📷 _Insert architecture diagram here_
+<img width="5284" height="2603" alt="Blank diagram (2)" src="https://github.com/user-attachments/assets/99ccaec6-a465-40b4-8d62-f98826f57b19" />
+
 
 ---
 
