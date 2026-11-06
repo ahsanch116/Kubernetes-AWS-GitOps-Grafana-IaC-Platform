@@ -790,5 +790,3 @@ Kubernetes rolling updates replace pods one at a time. Readiness probes ensure n
 - IAM roles with least privilege — nodes only have ECR read access
 
 ---
-
-*Built with ❤️ as a portfolio project demonstrating production-grade DevOps practices.*
